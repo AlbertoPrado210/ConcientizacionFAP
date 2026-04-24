@@ -1,0 +1,88 @@
+/* Contenedor principal con degradado azul como el cielo del afiche */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #004481 0%, #002d54 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+/* Tarjeta blanca central */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #004481;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Estilo de los campos de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Evita que el input se salga del contenedor */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #004481;
+}
+
+/* Botón Rojo Llamativo (Igual que el logo de 25 y 26 de Abril) */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #e30613; /* Rojo institucional */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #b3050f;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

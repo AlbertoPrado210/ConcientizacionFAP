@@ -1,0 +1,33 @@
+<div class="main-container">
+  <div class="card">
+    <div style="background-color: #004481; color: white; padding: 10px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="margin: 0;">BALP - LIMA 2026</h3>
+    </div>
+
+    <h2>¡VUELO GRATIS!</h2>
+    <p>Regístrate para participar en el sorteo de paseos en la aeronave <strong>Spartan</strong> o <strong>Twin Otter</strong> este 25 y 26 de abril.</p>
+
+    <form [formGroup]="registroForm" (ngSubmit)="enviarDatos()">
+      <div class="input-group">
+        <label>Nombre y Apellidos</label>
+        <input type="text" formControlName="nombre" placeholder="Nombre completo">
+      </div>
+
+      <div class="input-group">
+        <label>Correo Institucional / Personal</label>
+        <input type="email" formControlName="email" placeholder="ejemplo@correo.com">
+      </div>
+
+      <div class="input-group">
+        <label>DNI / Carnet de Identidad</label>
+        <input type="text" formControlName="dni" placeholder="Ingresa tu documento">
+      </div>
+
+      <button type="submit" [disabled]="!registroForm.valid">OBTENER MI PASE GRATUITO</button>
+    </form>
+
+    <p style="font-size: 0.7rem; margin-top: 20px; color: #999;">
+      * Cupos limitados. Solo ingreso peatonal. Base Aérea Las Palmas.
+    </p>
+  </div>
+</div>
