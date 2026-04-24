@@ -21,5 +21,8 @@ def registro():
     }), 200
 
 if __name__ == '__main__':
-    # Correr en el puerto 5000
-    app.run(debug=True, port=5000)
+    import os
+    # Toma el puerto de las variables de entorno (útil en Railway, Render, Heroku, etc.)
+    port = int(os.environ.get("PORT", 5000))
+    # El modo debug debería idealmente obtenerse de una variable de entorno, lo dejamos False por seguridad
+    app.run(debug=False, port=port, host='0.0.0.0')
